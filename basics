@@ -1,0 +1,10 @@
+//Q1. Create a file with name basics and show all the features that you know about javascript?
+// Try explaining in 1-2 lines : example - Prototype : An object which behaves as a link between two functions and provides inheritance
+
+Hoisting: Java Script's default function to move declaration to the top of the scope before it get executed.
+Closure: Function which can access variables from their scope, parent scope, and the global scope.
+Call_back: A function to pass as an argument to another function and is executed after this task.
+Bind: A method to create a function, and when calls it, use the this keyword to set a specific value
+Call_apply: call and apply methods allow to invoke a function with sepcificed this value and argument immediatelly, call pass argument individually,
+ apply pass array.
+ Literaly: a direct way to creat one value and declare, define it without constructors or functions.

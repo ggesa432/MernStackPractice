@@ -82,7 +82,7 @@ app.put('/api/users/:username', async (req, res) => {
     // Ensure the new hobby is not already in the user's hobby list
     const updatedHobbies = new Set([...user.hobbies.map(h => h.toString()), ...hobbies]);
 
-    user.hobbies = Array.from(updatedHobbies); // Convert Set back to an array
+    user.hobbies = Array.from(updatedHobbies); 
     await user.save();
     
     res.json(user);

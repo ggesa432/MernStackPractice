@@ -4,7 +4,7 @@ import './SignUp.css';
 const SignUp = ({ hobbies }) => {
   const [username, setUsername] = useState('');
   const [selectedHobby, setSelectedHobby] = useState('');
-  const [userHobbies, setUserHobbies] = useState([]); // Store user's existing hobbies
+  const [userHobbies, setUserHobbies] = useState([]); 
   const [message, setMessage] = useState('');
 
   // Fetch user hobbies when the username changes
@@ -28,12 +28,12 @@ const SignUp = ({ hobbies }) => {
     fetch(`http://localhost:5000/api/users/${username}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ hobbies: [selectedHobby] }), // Save one hobby at a time
+      body: JSON.stringify({ hobbies: [selectedHobby] }), 
     })
       .then(res => res.json())
       .then(data => {
         setMessage(`User ${data.username} updated successfully!`);
-        setUserHobbies(data.hobbies.map(h => h._id)); // Refresh user's hobbies
+        setUserHobbies(data.hobbies.map(h => h._id)); 
       })
       .catch(err => console.error(err));
 
